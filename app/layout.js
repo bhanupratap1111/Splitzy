@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className}`}
       >
-        <ClerkProvider>
+        <ClerkProvider
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+        >
           <ConvexClientProvider>
             <Header/>
             <main className="min-h-screen">
